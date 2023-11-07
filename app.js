@@ -39,26 +39,43 @@ import ReactDOM from "react-dom/client";
 // const root = ReactDOM.createRoot(document.getElementById("headerelement"))
 // root.render(<Headings/>)
 
-
 // create the functionalcomponent of the same with jsx
-const Paragraph = () => {
-  return(
-  <div>
-    <h5>this is a single line paragraph</h5>
-  </div>);
-};
-const Heading = () => {
+// const Paragraph = () => {
+//   return(
+//   <div>
+//     <h5>this is a single line paragraph</h5>
+//   </div>);
+// };
+// const Heading = () => {
+//   return (
+//     <div>
+//       <h1>hi this is react 1</h1>
+//       <h2>hi this is react 2 </h2>
+//       <h3>hi this is react3 </h3>
+//       <Paragraph />
+//       {Paragraph()}
+//       <Paragraph></Paragraph>
+//     </div>
+//   );
+// };
+
+// const root1 = ReactDOM.createRoot(document.getElementById("headerelement"));
+// root1.render(<Heading/>);
+// create a header component from scratch using functional components in jsx
+
+const Header = () => {
   return (
-    <div>
-      <h1>hi this is react 1</h1>
-      <h2>hi this is react 2 </h2>
-      <h3>hi this is react3 </h3>
-      <Paragraph />
-      {Paragraph()}
-      <Paragraph></Paragraph>
+    <div className="Header">
+      <div className="logo">
+        <img
+          src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=626&ext=jpg&ga=GA1.1.848480779.1692949432&semt=ais"
+          width={100}
+        ></img>
+      </div>
+      <div className="searchbar"></div>
+      <button>search</button>
     </div>
   );
 };
-
-const root1 = ReactDOM.createRoot(document.getElementById("headerelement"));
-root1.render(<Heading/>);
+const root = ReactDOM.createRoot(document.getElementById("headerelement"));
+root.render(<Header />);
